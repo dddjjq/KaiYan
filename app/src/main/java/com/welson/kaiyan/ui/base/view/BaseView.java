@@ -1,4 +1,4 @@
-package com.welson.kaiyan.ui.base;
+package com.welson.kaiyan.ui.base.view;
 
 public interface BaseView<T> {
     void showSuccess(T t);

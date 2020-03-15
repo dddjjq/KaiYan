@@ -1,6 +1,6 @@
-package com.welson.kaiyan.ui.fragment;
+package com.welson.kaiyan.ui.fragment.home;
 
-import com.welson.kaiyan.ui.base.BaseFragment;
+import com.welson.kaiyan.ui.base.fragment.BaseFragment;
 
 import androidx.lifecycle.ViewModel;
 

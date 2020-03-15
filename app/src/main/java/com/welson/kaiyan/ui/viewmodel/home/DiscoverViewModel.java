@@ -1,4 +1,4 @@
-package com.welson.kaiyan.ui.viewmodel;
+package com.welson.kaiyan.ui.viewmodel.home;
 
 import com.welson.kaiyan.model.BaseData;
 

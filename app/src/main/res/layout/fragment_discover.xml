@@ -65,6 +65,6 @@
 
         <variable
             name="discover"
-            type="com.welson.kaiyan.ui.viewmodel.DiscoverViewModel" />
+            type="com.welson.kaiyan.ui.viewmodel.home.DiscoverViewModel" />
     </data>
 </layout>

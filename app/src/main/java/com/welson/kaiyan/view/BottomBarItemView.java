@@ -1,14 +1,12 @@
 package com.welson.kaiyan.view;
 
 import android.content.Context;
-import android.widget.RelativeLayout;
 
 import com.welson.kaiyan.ui.base.view.BaseLinearLayout;
-import com.welson.kaiyan.ui.base.view.BaseRelativeLayout;
 
-public class BottomBarView extends BaseLinearLayout {
+public class BottomBarItemView extends BaseLinearLayout {
 
-    public BottomBarView(Context context) {
+    public BottomBarItemView(Context context) {
         super(context);
     }
 

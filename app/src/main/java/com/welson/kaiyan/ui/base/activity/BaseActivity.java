@@ -1,4 +1,4 @@
-package com.welson.kaiyan.ui.base;
+package com.welson.kaiyan.ui.base.activity;
 
 import android.os.Bundle;
 

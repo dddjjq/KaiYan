@@ -1,14 +1,13 @@
-package com.welson.kaiyan.ui.fragment;
+package com.welson.kaiyan.ui.fragment.home;
 
 import com.welson.kaiyan.R;
 import com.welson.kaiyan.databinding.FragmentDiscoverBinding;
-import com.welson.kaiyan.ui.base.BaseFragment;
-import com.welson.kaiyan.ui.viewmodel.DiscoverViewModel;
+import com.welson.kaiyan.ui.base.fragment.BaseRequestFragment;
+import com.welson.kaiyan.ui.viewmodel.home.DiscoverViewModel;
 
-import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProviders;
 
-public class DiscoverFragment extends BaseFragment<FragmentDiscoverBinding,DiscoverViewModel> {
+public class DiscoverFragment extends BaseRequestFragment<FragmentDiscoverBinding,DiscoverViewModel> {
 
     @Override
     public int getLayoutId() {

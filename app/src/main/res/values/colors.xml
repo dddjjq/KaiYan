@@ -6,4 +6,6 @@
     <color name="textNormal">#000000</color>
     <color name="dividerColor">#ededed</color>
     <color name="textFocus">#4389dc</color>
+    <color name="textBottomNormal">#a2a2a2</color>
+    <color name="textBottomSelected">#484848</color>
 </resources>

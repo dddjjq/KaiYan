@@ -1,4 +1,4 @@
-package com.welson.kaiyan.ui.base;
+package com.welson.kaiyan.ui.base.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
