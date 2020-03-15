@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KaiYan</string>
+    <string name="discover_category_title">热门分类</string>
+    <string name="discover_category_all">查看全部分类 ></string>
+</resources>

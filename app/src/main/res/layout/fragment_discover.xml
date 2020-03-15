@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.youth.banner.Banner
+            android:id="@+id/discover_banner"
+            android:layout_width="match_parent"
+            android:layout_height="186dp"
+            android:layout_marginTop="10dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:src="@color/dividerColor"
+            android:layout_marginTop="12dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="11dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textNormal"
+                android:textSize="22sp"
+                android:text="@string/discover_category_title"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/discover_category_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textFocus"
+                android:layout_gravity="end"
+                android:textSize="14sp"
+                android:text="@string/discover_category_all"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:textStyle="bold"
+                android:clickable="true" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="20dp">
+
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:src="@color/dividerColor"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+    <data>
+
+        <variable
+            name="discover"
+            type="com.welson.kaiyan.ui.viewmodel.DiscoverViewModel" />
+    </data>
+</layout>
