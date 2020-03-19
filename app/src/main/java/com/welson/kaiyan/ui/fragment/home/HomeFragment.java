@@ -1,14 +1,19 @@
 package com.welson.kaiyan.ui.fragment.home;
 
+import android.view.View;
+
 import com.welson.kaiyan.ui.base.fragment.BaseFragment;
 
 import androidx.lifecycle.ViewModel;
 
+/**
+ * 主类型首页
+ */
 public class HomeFragment extends BaseFragment {
 
     @Override
-    public int getLayoutId() {
-        return 0;
+    public View getRootView() {
+        return null;
     }
 
     @Override

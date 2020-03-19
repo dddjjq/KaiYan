@@ -1,6 +1,8 @@
 package com.welson.kaiyan.ui.base.activity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,21 +10,21 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.lifecycle.ViewModel;
 
-public abstract class BaseActivity<T extends ViewDataBinding, V extends ViewModel> extends AppCompatActivity {
+public abstract class BaseActivity<V extends ViewModel> extends AppCompatActivity {
 
-    protected T mBinding;
     protected V mViewModel;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, getLayoutId());
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(getRootView());
         mViewModel = getViewModel();
         initData();
         addListener();
     }
 
-    public abstract int getLayoutId();
+    public abstract View getRootView();
 
     public abstract V getViewModel();
 

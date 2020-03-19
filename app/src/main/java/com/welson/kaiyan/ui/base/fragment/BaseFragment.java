@@ -16,17 +16,14 @@ import androidx.lifecycle.ViewModel;
  * 主页互相切换的三个fragment
  */
 @SuppressWarnings("unchecked")
-public abstract class BaseFragment<T extends ViewDataBinding, V extends ViewModel>
-        extends Fragment {
+public abstract class BaseFragment<V extends ViewModel> extends Fragment {
 
-    protected T mBinding;
     protected V mViewModel;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mBinding = DataBindingUtil.inflate(inflater, getLayoutId(), container, false);
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return getRootView();
     }
 
     @Override
@@ -47,7 +44,7 @@ public abstract class BaseFragment<T extends ViewDataBinding, V extends ViewMode
         super.onDestroyView();
     }
 
-    public abstract int getLayoutId();
+    public abstract View getRootView();
 
     public abstract V getViewModel();
 

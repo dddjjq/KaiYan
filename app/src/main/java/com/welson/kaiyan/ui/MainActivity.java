@@ -1,16 +1,34 @@
 package com.welson.kaiyan.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.view.View;
 
-import android.os.Bundle;
+import androidx.lifecycle.ViewModel;
 
-import com.welson.kaiyan.R;
+import com.welson.kaiyan.databinding.ActivityMainBinding;
+import com.welson.kaiyan.ui.base.activity.BaseActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
+
+    ActivityMainBinding mBinding;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public View getRootView() {
+        mBinding = ActivityMainBinding.inflate(getLayoutInflater());
+        return mBinding.getRoot();
+    }
+
+    @Override
+    public ViewModel getViewModel() {
+        return null;
+    }
+
+    @Override
+    public void initData() {
+
+    }
+
+    @Override
+    public void addListener() {
+
     }
 }

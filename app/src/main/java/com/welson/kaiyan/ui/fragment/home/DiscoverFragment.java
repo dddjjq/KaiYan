@@ -1,22 +1,28 @@
 package com.welson.kaiyan.ui.fragment.home;
 
+import android.view.View;
+
 import com.welson.kaiyan.R;
 import com.welson.kaiyan.databinding.FragmentDiscoverBinding;
 import com.welson.kaiyan.ui.base.fragment.BaseRequestFragment;
 import com.welson.kaiyan.ui.viewmodel.home.DiscoverViewModel;
 
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 public class DiscoverFragment extends BaseRequestFragment<FragmentDiscoverBinding,DiscoverViewModel> {
 
+    private FragmentDiscoverBinding mBinding;
+
     @Override
-    public int getLayoutId() {
-        return R.layout.fragment_discover;
+    public View getRootView() {
+        mBinding = FragmentDiscoverBinding.inflate(getLayoutInflater());
+        return mBinding.getRoot();
     }
 
     @Override
     public DiscoverViewModel getViewModel() {
-        return ViewModelProviders.of(getActivity()).get(DiscoverViewModel.class);
+        return new ViewModelProvider(this).get(DiscoverViewModel.class);
     }
 
     @Override
