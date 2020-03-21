@@ -3,20 +3,20 @@ package com.welson.kaiyan.ui.fragment.home;
 import android.view.View;
 
 import com.welson.kaiyan.R;
-import com.welson.kaiyan.databinding.FragmentDiscoverBinding;
+import com.welson.kaiyan.databinding.FragmentHomeDiscoverBinding;
+import com.welson.kaiyan.model.BaseData;
 import com.welson.kaiyan.ui.base.fragment.BaseRequestFragment;
 import com.welson.kaiyan.ui.viewmodel.home.DiscoverViewModel;
 
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
-public class DiscoverFragment extends BaseRequestFragment<FragmentDiscoverBinding,DiscoverViewModel> {
+public class DiscoverFragment extends BaseRequestFragment<DiscoverViewModel, BaseData> {
 
-    private FragmentDiscoverBinding mBinding;
+    private FragmentHomeDiscoverBinding mBinding;
 
     @Override
     public View getRootView() {
-        mBinding = FragmentDiscoverBinding.inflate(getLayoutInflater());
+        mBinding = FragmentHomeDiscoverBinding.inflate(getLayoutInflater());
         return mBinding.getRoot();
     }
 
@@ -36,7 +36,7 @@ public class DiscoverFragment extends BaseRequestFragment<FragmentDiscoverBindin
     }
 
     @Override
-    public void showSuccess(Object o) {
+    public void showSuccess(BaseData baseData) {
 
     }
 

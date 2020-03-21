@@ -11,24 +11,24 @@ public abstract class BaseLinearLayout extends LinearLayout {
 
     public BaseLinearLayout(Context context) {
         super(context);
-        init(context);
+        init(context,null);
     }
 
     public BaseLinearLayout(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        init(context);
+        init(context,attrs);
     }
 
-    private void init(Context context) {
+    private void init(Context context,AttributeSet attrs) {
         LayoutInflater.from(context).inflate(getLayoutId(), this, true);
-        initView(context);
+        initView(context,attrs);
         initData();
         addListener();
     }
 
     public abstract int getLayoutId();
 
-    public abstract void initView(Context context);
+    public abstract void initView(Context context,AttributeSet attrs);
 
     public abstract void initData();
 

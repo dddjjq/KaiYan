@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="41.7dp"
+    android:background="@color/bottomBarColor"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
 
-</RelativeLayout>
+    <com.welson.kaiyan.view.BottomBarItemView
+        android:id="@+id/bottom_bar_home"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:bottomImage="@drawable/ic_tab_home"
+        app:bottomText="@string/bottom_home" />
+
+    <com.welson.kaiyan.view.BottomBarItemView
+        android:id="@+id/bottom_bar_community"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:bottomImage="@drawable/ic_tab_community"
+        app:bottomText="@string/bottom_community" />
+
+    <ImageView
+        android:id="@+id/bottom_bar_add"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:src="@drawable/publish_add" />
+
+    <com.welson.kaiyan.view.BottomBarItemView
+        android:id="@+id/bottom_bar_notice"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:bottomImage="@drawable/ic_tab_notice"
+        app:bottomText="@string/bottom_notice" />
+
+    <com.welson.kaiyan.view.BottomBarItemView
+        android:id="@+id/bottom_bar_mine"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:bottomImage="@drawable/ic_tab_mine"
+        app:bottomText="@string/bottom_mine" />
+
+
+</LinearLayout>

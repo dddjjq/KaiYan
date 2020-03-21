@@ -10,6 +10,8 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModel;
 
 /**
@@ -29,14 +31,21 @@ public abstract class BaseFragment<V extends ViewModel> extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        initData();
-        addListener();
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mViewModel = getViewModel();
+        initData();
+        addListener();
+    }
+
+    public void newFragment(BaseFragment baseFragment, int id) {
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.add(id, baseFragment);
+        transaction.commit();
     }
 
     @Override

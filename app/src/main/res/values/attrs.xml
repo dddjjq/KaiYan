@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BottomBarItemView">
+        <attr name="bottomImage" format="reference" />
+        <attr name="bottomText" format="string" />
+    </declare-styleable>
+</resources>

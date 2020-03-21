@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel;
 
 import com.welson.kaiyan.databinding.ActivityMainBinding;
 import com.welson.kaiyan.ui.base.activity.BaseActivity;
+import com.welson.kaiyan.ui.fragment.home.HomeFragment;
 
 public class MainActivity extends BaseActivity {
 
@@ -24,7 +25,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initData() {
-
+        newFragment(new HomeFragment(),mBinding.mainContainer.getId());
     }
 
     @Override

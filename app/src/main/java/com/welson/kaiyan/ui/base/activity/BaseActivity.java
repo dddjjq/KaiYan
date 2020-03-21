@@ -4,10 +4,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
+import com.welson.kaiyan.ui.base.fragment.BaseFragment;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-import androidx.databinding.ViewDataBinding;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModel;
 
 public abstract class BaseActivity<V extends ViewModel> extends AppCompatActivity {
@@ -22,6 +24,13 @@ public abstract class BaseActivity<V extends ViewModel> extends AppCompatActivit
         mViewModel = getViewModel();
         initData();
         addListener();
+    }
+
+    public void newFragment(BaseFragment baseFragment, int id) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.add(id, baseFragment);
+        transaction.commit();
     }
 
     public abstract View getRootView();

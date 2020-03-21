@@ -8,4 +8,5 @@
     <color name="textFocus">#4389dc</color>
     <color name="textBottomNormal">#a2a2a2</color>
     <color name="textBottomSelected">#484848</color>
+    <color name="bottomBarColor">#FAFAFA</color>
 </resources>
